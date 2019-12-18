@@ -19,7 +19,6 @@ class CreateBarangTable extends Migration
             $table->string('nama_brg');
             $table->integer('jumlah_brg');
             $table->date('tgl_masuk');
-            $table->date('tgl_keluar');
             $table->timestamps();
         });
     }

@@ -18,3 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/barangmasuk/delete/{id}', 'MasukController@destroy');
+Route::get('/barangmasuk', 'MasukController@index')->name('homemasuk');
