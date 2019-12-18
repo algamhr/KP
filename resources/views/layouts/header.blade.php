@@ -8,8 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  
 
-  <title>SB Admin 2</title>
+  <title>Sistem Inventaris Barang ATK - Pelindo I</title>
+
+  <!-- icon Pelindo I-->
+  <link rel="icon" type="image/png" href="{{asset('assets/login/images/icons/favicon.png')}}"/>
 
   <!-- Custom fonts for this template-->
   <link href="{{asset ('assets/backend/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
