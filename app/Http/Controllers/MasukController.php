@@ -26,7 +26,7 @@ class MasukController extends Controller
     public function index()
     {
         $barangmasuk = DB::table('barang')->orderBy('tgl_masuk', 'desc')->get();
-        return view('barangmasuk.homemasuk', ['barangmasuk'=>$barangmasuk]);
+        return view('barangmasuk.index', ['barangmasuk'=>$barangmasuk]);
     }
 
     public function destroy($id)
@@ -34,6 +34,6 @@ class MasukController extends Controller
         //
         $barangmasuk = DB::table('barang')->where('id', $id)->delete();
         session()->flash('success', 'data barang berhasil di hapus');
-        return redirect('barangmasuk.homemasuk');
+        return redirect(route('barangmasuk.index'));
     }
 }
