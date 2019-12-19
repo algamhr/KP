@@ -17,26 +17,34 @@
 
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="kategory_barang">Kategory Barang</label>
-                    <input type="text" class="form-control  name="kategory_barang" id="kategory_barang" placeholder="Kategory Barang" ">
+                    <label for="kategoribarang_id">Pilih Urusan</label>
+                    <select name="kategoribarang" id="kategoribarang" class="form-control">
+                        @foreach($kategoribarang as $kategoribarang)
+                        <option value=" {{ $kategoribarang->id }}"
+
+                            >
+                        {{ $kategoribarang->kategoribarang }}
+                            </option>
+                        @endforeach
+                    </select>
                 </div>
 
                 <div class="form-group">
                     <label for="nama Barang">Nama Barang</label>
-                    <input type="text" class="form-control  name="nama Barang" id="nama Barang" placeholder="Nama Barang" ">
+                    <input type="text" class="form-control"  name="nama_brg" id="nama_brg placeholder="Nama Barang">
                 </div>
 
 
 
                 <div class="form-group">
-                    <label for="jumlah barang">Jumlah Barang</label>
-                    <input type="text" class="form-control  name="jumlah barang" id="jumlah barang" placeholder="Jumlah Barang">
+                    <label for="jumlah_brg">Jumlah Barang</label>
+                    <input type="text" class="form-control"  name="jumlah_brg" id="jumlah barang" placeholder="Jumlah Barang">
                 </div>
 
 
                 <div class="form-group">
-                    <label for="tanggal_masuk">Tanggal Masuk</label>
-                    <input type="text" class="form-control  name="tanggal_masuk" id="tanggal_masuk" placeholder="tanggal masuk" ">
+                    <label for="tgl_masuk">Tanggal Masuk</label>
+                    <input type="text" class="form-control" name="tgl_masuk" id="tgl_masuk" placeholder="yyyy-mm-dd">
                 </div>
             </div>
 
