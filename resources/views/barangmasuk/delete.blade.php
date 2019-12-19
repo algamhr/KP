@@ -1,6 +1,6 @@
 <a class="btn btn-danger btn-circle" href="#" data-toggle="modal" data-target="#deleteModal{{$barangmasuk->id}}">
         <i class="fa fa-trash"></i>
-        Hapus
+
     </a>
     <!-- Tambah Modal-->
     <div class="modal fade" id="deleteModal{{$barangmasuk->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -28,4 +28,3 @@
             </div>
         </div>
     </div>
-    
