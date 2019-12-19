@@ -19,3 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('barangmasuk', 'MasukController');
+Route::resource('kategory-barang', 'KategoryBarangController');

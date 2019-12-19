@@ -36,4 +36,46 @@ class MasukController extends Controller
         session()->flash('success', 'data barang berhasil di hapus');
         return redirect(route('barangmasuk.index'));
     }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'nama' => 'required|unique:unit',
+
+        ]);
+
+        $barangmasuk = barangmasuk::create([
+            'nama_brg' => $request->nama_brg,
+            'kategory_barang_id' => $request->kategory_barang,
+            'jumlah_brg' => $request->jumlah_brg,
+            'tgl_masuk' =>$request->tgl_masuk,
+        ]);
+
+        session()->flash('success', 'urusan berhasil di tambahkan');
+         return redirect(route('barangmasuk.index'));
+    }
+
+    public function update(Request $request, $id)
+    {
+         $request->validate([
+            'nama_brg' => 'required',
+        ]);
+
+        $barangmasuk = barangmasuk::find($id);
+        $barangmasuk->update([
+            'nama_brg' => $request->nama_brg,
+            'kategory_barang_id' => $request->kategory_barang_id,
+            'jumlah_brg' => $request->jumlah_brg,
+            'tgl_masuk' =>$request->tgl_masuk,
+        ]);
+
+        if (!$barangmasuk) {
+            session()->flash('success', 'Data gagal diubah');
+            return redirect(route('unibarangmasukt.index'));
+        } else {
+            session()->flash('success', 'Data berhasil diubah');
+            return redirect(route('barangmasuk.index'));
+        }
+    }
 }
+
