@@ -2,8 +2,8 @@
     <i class="fa fa-edit"></i>
 
 </a>
-{{-- <!-- Tambah Modal-->
-<div class="modal fade" id="editModal{{$jnspajak->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Tambah Modal-->
+<div class="modal fade" id="editModal{{$kategoribarang->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
     <div class="modal-content">
         <div class="modal-header">
@@ -12,13 +12,18 @@
             <span aria-hidden="true">×</span>
         </button>
         </div>
-        <form action="{{route('jenis-pajak.update', $jnspajak->id)}}" method="POST">
+        <form action="{{route('kategoribarang.update', $kategoribarang->id)}}" method="POST">
             @method('PUT')
             {{ csrf_field() }}
             <div class="modal-body">
             <div class="form-group">
-                    <label for="jenis_pajak">Nama Lengkap</label>
-                    <input type="text" class="form-control" name="jenis_pajak" id="jenis_pajak" placeholder="jenis_pajak" value="{{$jnspajak->jenis_pajak}}">
+                    <label for="keteranganbarang">Keterangan Barang</label>
+                    <input type="text" class="form-control" name="keteranganbarang" id="keteranganbarang" placeholder="keteranganbarang" value="{{$kategoribarang->keteranganbarang}}">
+                </div>
+
+                <div class="form-group">
+                    <label for="kategoribarang">Kategory Barang </label>
+                    <input type="text" class="form-control" name="kategoribarang" id="kategoribarang" placeholder="kategoribarang" value="{{$kategoribarang->kategoribarang}}">
                 </div>
 
             </div>
@@ -29,4 +34,4 @@
         </form>
     </div>
     </div>
-</div> --}}
+</div>
