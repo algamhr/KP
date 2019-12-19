@@ -44,7 +44,7 @@ class KategoryBarangController extends Controller
 
         $kategory_barang = kategory_barang::create([
             'keterangan_barang' => $request->nama_brg,
-            'kategory_barang' => $request->kategory_barang,
+            'kategory_barang' => $request->kategori_barang,
 
         ]);
 
