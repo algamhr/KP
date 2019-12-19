@@ -14,6 +14,7 @@
 
             <h6 class="m-0 font-weight-bold text-primary">Tabel Kategori Barang</h6>
 
+
           </div>
           <div class="card-body">
             <div class="table-responsive">
@@ -53,5 +54,6 @@
 
     </div>
     <!-- End of Main Content -->
+
 
 @endsection

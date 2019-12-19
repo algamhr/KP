@@ -16,21 +16,24 @@
             {{ csrf_field() }}
 
             <div class="modal-body">
-                <div class="form-group">
-                    <label for="kategoribarang">Kategori Barang</label>
-                    <input type="text" class="form-control"  name="kategoribarang" id="kategoribarang" placeholder="Kategori Barang">
-                </div>
+                    <div class="form-group">
+                        <label for="kategoribarang">Kategori Barang</label>
+                        <input type="text" class="form-control"  name="kategoribarang" id="kategoribarang" placeholder="Kategori Barang">
+                    </div>
 
-                <div class="form-group">
-                    <label for="keteranganbarang">Keterangan</label>
-                    <input type="text" class="form-control"  name="keteranganbarang" id="keteranganbarang" placeholder="Keterangan Barang">
-                </div>
+                    <div class="form-group">
+                        <label for="keteranganbarang">Keterangan</label>
+                        <input type="text" class="form-control"  name="keteranganbarang" id="keteranganbarang" placeholder="Keterangan Barang">
+                    </div>
 
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Simpan</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    </div>
             </div>
         </form>
+
     </div>
     </div>
 </div>
+
