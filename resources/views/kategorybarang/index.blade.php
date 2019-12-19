@@ -13,7 +13,7 @@
         <div class="card shadow mb-4">
           <div class="card-header py-3">
             <div class="float-right">
-                @include('kategoribarang.add')
+                @include('kategorybarang.add')
             </div>
 
             <h6 class="m-0 font-weight-bold text-primary">Tabel Data Barang Masuk</h6>
@@ -33,15 +33,15 @@
 
                 </thead>
                 @php $no = 1; @endphp
-                @foreach ($kategoribarang as $kategoribarang)
+                @foreach ($kategory_barang as $kategoribarang)
                 <tbody>
                   <tr>
                     <td class="text-left">{{$no}}</td>
                     <td class="text-left">{{$kategoribarang->kategori_brg}}</td>
                     <td class="text-left">{{$kategoribarang->keterangan_brg}}</td>
                     <td>
-                         @include('kategoribarang.edit')
-                         @include('kategoribarang.delete')
+                         @include('kategorybarang.edit')
+                         @include('kategorybarang.delete')
 
                     </td>
                   </tr>

@@ -12,7 +12,7 @@
             <span aria-hidden="true">×</span>
         </button>
         </div>
-        <form action="{{route('kategoribarang.store')}}" method="POST">
+        <form action="{{route('kategory-barang.store')}}" method="POST">
             {{ csrf_field() }}
 
             <div class="modal-body">
