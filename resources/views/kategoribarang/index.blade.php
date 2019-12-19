@@ -33,7 +33,7 @@
                 @foreach ($kategoribarang as $kategoribarang)
                 <tbody>
                   <tr>
-                    <td class="text-left">{{$no}}</td>
+                    <td class="text-left">{{$no++}}</td>
                     <td class="text-left">{{$kategoribarang->kategoribarang}}</td>
                     <td class="text-left">{{$kategoribarang->keteranganbarang}}</td>
                     <td>
