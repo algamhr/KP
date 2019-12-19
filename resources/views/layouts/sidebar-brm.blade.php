@@ -46,7 +46,7 @@
 
             <!-- Nav Item - Kategori Barang -->
             <li class="nav-item">
-              <a class="nav-link" href="/kategory-barang">
+              <a class="nav-link" href="/kategoribarang">
                 <i class="fas fa-fw fa-wrench"></i>
                 <span>Kategori Barang</span>
               </a>
