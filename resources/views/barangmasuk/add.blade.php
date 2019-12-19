@@ -17,7 +17,7 @@
 
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="kategoribarang_id">Pilih Urusan</label>
+                    <label for="kategoribarang_id">Kategori Barang</label>
                     <select name="kategoribarang" id="kategoribarang" class="form-control">
                         @foreach($kategoribarang as $kategoribarang)
                         <option value=" {{ $kategoribarang->id }}"
