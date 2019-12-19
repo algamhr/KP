@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\barangmasuk;
+use App\kategoribarang;
 
 class MasukController extends Controller
 {
@@ -26,7 +27,8 @@ class MasukController extends Controller
     public function index()
     {
         $barangmasuk = DB::table('barang')->orderBy('tgl_masuk', 'desc')->get();
-        return view('barangmasuk.index', ['barangmasuk'=>$barangmasuk]);
+        return view('barangmasuk.index', ['barangmasuk'=>$barangmasuk])
+        ->with('kategoribarang', kategoribarang::all());
     }
 
     public function destroy($id)
@@ -40,7 +42,7 @@ class MasukController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama' => 'required|unique:unit',
+            'nama_brg' => 'required',
 
         ]);
 
