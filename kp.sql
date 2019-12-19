@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 18, 2019 at 10:59 AM
+-- Generation Time: Dec 19, 2019 at 09:18 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.1.27
 
@@ -30,21 +30,13 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `barang` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `kategori_brg` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `kategori_barang_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `nama_brg` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `jumlah_brg` int(11) NOT NULL,
   `tgl_masuk` date NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `barang`
---
-
-INSERT INTO `barang` (`id`, `kategori_brg`, `nama_brg`, `jumlah_brg`, `tgl_masuk`, `created_at`, `updated_at`) VALUES
-(1, '01', 'Kertas A4 SIDU', 80, '2019-11-09', NULL, NULL),
-(2, '01', 'Kertas F4 SIDU', 20, '2019-11-09', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -60,16 +52,6 @@ CREATE TABLE `divisi` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `divisi`
---
-
-INSERT INTO `divisi` (`id`, `nama_divisi`, `ket_divisi`, `created_at`, `updated_at`) VALUES
-(1, 'Divisi Umum', 'SDM', NULL, NULL),
-(2, 'Divisi Keuangan', 'Keuangan', NULL, NULL),
-(3, 'Divisi Teknik', 'Teknik', NULL, NULL),
-(4, 'Divisi Bisnis', 'E-Billing dan PPSA', NULL, NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -83,13 +65,6 @@ CREATE TABLE `gudang` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `gudang`
---
-
-INSERT INTO `gudang` (`id`, `nama_gudang`, `created_at`, `updated_at`) VALUES
-(1, 'Umum', NULL, NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -98,21 +73,11 @@ INSERT INTO `gudang` (`id`, `nama_gudang`, `created_at`, `updated_at`) VALUES
 
 CREATE TABLE `kategori_barang` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `kategori_brg` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `keterangan barang` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `kategori_barang` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `keterangan_barang` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `kategori_barang`
---
-
-INSERT INTO `kategori_barang` (`id`, `kategori_brg`, `keterangan barang`, `created_at`, `updated_at`) VALUES
-(1, '01', 'Alat Tulis Kantor', NULL, NULL),
-(2, '02', 'Alat Elektronik', NULL, NULL),
-(3, '03', 'Alat Kebersihan', NULL, NULL),
-(4, '04', 'Sembako', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -131,12 +96,12 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(32, '2014_10_12_000000_create_users_table', 1),
-(33, '2014_10_12_100000_create_password_resets_table', 1),
-(34, '2019_12_13_074519_create_barang_table', 1),
-(35, '2019_12_13_074550_create_kategori_barang_table', 1),
-(36, '2019_12_13_074602_create_divisi_table', 1),
-(37, '2019_12_13_074613_create_gudang_table', 1);
+(44, '2014_10_12_000000_create_users_table', 1),
+(45, '2014_10_12_100000_create_password_resets_table', 1),
+(46, '2019_12_13_074519_create_barang_table', 1),
+(47, '2019_12_13_074550_create_kategori_barang_table', 1),
+(48, '2019_12_13_074602_create_divisi_table', 1),
+(49, '2019_12_13_074613_create_gudang_table', 1);
 
 -- --------------------------------------------------------
 
@@ -173,7 +138,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Alga Mahargarika', 'algamhr', 'alga@kuatic.com', NULL, '$2y$10$leOe.s1yedqahv.tDLVON.USioffkGbkF5GvEp/Fzg/UgNz9ttHTW', NULL, '2019-12-18 01:44:32', '2019-12-18 01:44:32');
+(1, 'Alga Mahargarika', 'algamhr', 'algamahargarika9@gmail.com', NULL, '$2y$10$LDcNsgcaX.cFzPFR8jdPXec/YRqbjaeQBtqxg8a4TQAmslg78iM16', NULL, '2019-12-19 01:15:38', '2019-12-19 01:15:38'),
+(2, 'Taufik Ramadhan', 'taufik', 'ramadhantaufik1998@gmail.com', NULL, '$2y$10$8UyhY5ND2uje4gOH2LLBMuoAImDGqcZRunGOUbTlbQfS.8OTLuILm', NULL, '2019-12-19 01:16:15', '2019-12-19 01:16:15'),
+(3, 'RR Kiswanti', 'rrkiswanti', 'kiswanti@pelindo1.co.id', NULL, '$2y$10$qBoC5GGYJPfeuwwSVsQwQeqCW20hpKnlx5mjmocFzaqViZFmXQ74G', NULL, '2019-12-19 01:16:52', '2019-12-19 01:16:52');
 
 --
 -- Indexes for dumped tables
@@ -230,37 +197,37 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `divisi`
 --
 ALTER TABLE `divisi`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `gudang`
 --
 ALTER TABLE `gudang`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `kategori_barang`
 --
 ALTER TABLE `kategori_barang`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
