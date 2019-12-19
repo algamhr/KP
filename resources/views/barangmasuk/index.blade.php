@@ -26,7 +26,7 @@
                 <thead>
                   <tr>
                     <th>Nomor</th>
-                    <th>Kategori Barang</th>
+
                     <th>Nama Barang</th>
                     <th>Jumlah</th>
                     <th>Tanggal Masuk</th>
@@ -38,8 +38,8 @@
                 @foreach ($barangmasuk as $barangmasuk)
                 <tbody>
                   <tr>
-                    <td class="text-left">{{$no}}</td>
-                    <td class="text-left">{{$barangmasuk->kategori_brg}}</td>
+                    <td class="text-left">{{$no++}}</td>
+
                     <td class="text-left">{{$barangmasuk->nama_brg}}</td>
                     <td class="text-left">{{$barangmasuk->jumlah_brg}}</td>
                     <td class="text-left">{{$barangmasuk->tgl_masuk}}</td>

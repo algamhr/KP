@@ -9,7 +9,7 @@ class barangmasuk extends Model
     protected $table = 'barang';
     protected $fillable =[
         'id',
-        'kategory_barang_id',
+        'kategoribarang_id',
         'nama_brg',
         'jumlah_brg',
         'tgl_masuk',
@@ -17,6 +17,6 @@ class barangmasuk extends Model
 
     public function kategoribarang()
     {
-        return $this->HasmMany(kategoribarang::class);
+        return $this->belongsTo(kategoribarang::class);
     }
 }
