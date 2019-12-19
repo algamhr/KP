@@ -40,12 +40,13 @@ class KategoriBarangController extends Controller
         $request->validate([
             'keteranganbarang' => 'required',
 
+
         ]);
 
         $kategoribarang = kategoribarang::create([
             'kategoribarang' => $request->kategoribarang,
             'keteranganbarang' => $request->keteranganbarang,
-            
+
         ]);
 
         session()->flash('success', 'urusan berhasil di tambahkan');
@@ -99,7 +100,7 @@ class KategoriBarangController extends Controller
             return redirect(route('kategoribarang.index'));
         } else {
             session()->flash('success', 'Data berhasil diubah');
-            return redirect(route('kategoriibarang.index'));
+            return redirect(route('kategoribarang.index'));
         }
     }
 

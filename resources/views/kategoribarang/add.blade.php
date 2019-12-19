@@ -18,12 +18,12 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label for="kategoribarang">Kategori Barang</label>
-                    <input type="text" class="form-control  name="kategoribarang" id="kategoribarang" placeholder="Kategori Barang" ">
+                    <input type="text" class="form-control"  name="kategoribarang" id="kategoribarang" placeholder="Kategori Barang">
                 </div>
 
                 <div class="form-group">
                     <label for="keteranganbarang">Keterangan</label>
-                    <input type="text" class="form-control  name="keteranganbarang" id="keteranganbarang" placeholder="Keterangan Barang" ">
+                    <input type="text" class="form-control"  name="keteranganbarang" id="keteranganbarang" placeholder="Keterangan Barang">
                 </div>
 
             <div class="modal-footer">
