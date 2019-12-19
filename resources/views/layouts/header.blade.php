@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  
+
 
   <title>Sistem Inventaris Barang ATK - Pelindo I</title>
 
@@ -21,5 +21,7 @@
 
   <!-- Custom styles for this template-->
   <link href="{{asset ('assets/backend/css/sb-admin-2.min.css')}}" rel="stylesheet">
+  <link href="{{asset('assets/backend/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
+  <script src="{{ asset('assets/backend/js/core/jquery.3.2.1.min.js') }}"></script>
 
 </head>
