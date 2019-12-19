@@ -14,7 +14,7 @@
                 </button>
             </div>
             <div class="modal-body" style="text-align:center;">
-                <p>Yakin ingin menghapus data dengan barang <b>{{$kategoribarang->keterangan_barang}}</b> ?</p>
+                <p>Yakin ingin menghapus data dengan barang <b>{{$kategoribarang->keteranganbarang}}</b> ?</p>
             </div>
             <div class="modal-footer">
                 <form action="{{ route('kategoribarang.destroy', $kategoribarang->id) }}" method="POST">

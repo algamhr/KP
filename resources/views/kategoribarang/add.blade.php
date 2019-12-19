@@ -12,18 +12,18 @@
             <span aria-hidden="true">×</span>
         </button>
         </div>
-        <form action="{{route('kategory-barang.store')}}" method="POST">
+        <form action="{{route('kategoribarang.store')}}" method="POST">
             {{ csrf_field() }}
 
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="kategory_barang">Kategory Barang</label>
-                    <input type="text" class="form-control  name="kategory_barang" id="kategory_barang" placeholder="Kategory Barang" ">
+                    <label for="kategoribarang">Kategori Barang</label>
+                    <input type="text" class="form-control  name="kategoribarang" id="kategoribarang" placeholder="Kategori Barang" ">
                 </div>
 
                 <div class="form-group">
-                    <label for="nama Barang">Keterangan</label>
-                    <input type="text" class="form-control  name="nama Barang" id="nama Barang" placeholder="Nama Barang" ">
+                    <label for="keteranganbarang">Keterangan</label>
+                    <input type="text" class="form-control  name="keteranganbarang" id="keteranganbarang" placeholder="Keterangan Barang" ">
                 </div>
 
             <div class="modal-footer">

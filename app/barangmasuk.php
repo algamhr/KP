@@ -15,8 +15,8 @@ class barangmasuk extends Model
         'tgl_masuk',
     ];
 
-    public function kategory_barang()
+    public function kategoribarang()
     {
-        return $this->HasmMany(kategory_barang::class);
+        return $this->HasmMany(kategoribarang::class);
     }
 }

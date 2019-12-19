@@ -4,19 +4,15 @@
 
 <!-- Begin Page Content -->
 <div class="container-fluid">
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                class="fas fa-download fa-sm text-white-50"></i> Simpan Dokumen</a>
-    </div>
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
           <div class="card-header py-3">
             <div class="float-right">
-                @include('kategorybarang.add')
+                @include('kategoribarang.add')
             </div>
 
-            <h6 class="m-0 font-weight-bold text-primary">Tabel Data Barang Masuk</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Tabel Kategori Barang</h6>
 
           </div>
           <div class="card-body">
@@ -25,7 +21,7 @@
 
                 <thead>
                   <tr>
-                    <th>id</th>
+                    <th>Nomor</th>
                     <th>Kategori Barang</th>
                     <th>Keterangan Barang</th>
                     <th>Action</th>
@@ -33,15 +29,15 @@
 
                 </thead>
                 @php $no = 1; @endphp
-                @foreach ($kategory_barang as $kategoribarang)
+                @foreach ($kategoribarang as $kategoribarang)
                 <tbody>
                   <tr>
                     <td class="text-left">{{$no}}</td>
-                    <td class="text-left">{{$kategoribarang->kategori_brg}}</td>
-                    <td class="text-left">{{$kategoribarang->keterangan_brg}}</td>
+                    <td class="text-left">{{$kategoribarang->kategoribarang}}</td>
+                    <td class="text-left">{{$kategoribarang->keteranganbarang}}</td>
                     <td>
-                         @include('kategorybarang.edit')
-                         @include('kategorybarang.delete')
+                         @include('kategoribarang.edit')
+                         @include('kategoribarang.delete')
 
                     </td>
                   </tr>

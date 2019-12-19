@@ -46,7 +46,7 @@ class MasukController extends Controller
 
         $barangmasuk = barangmasuk::create([
             'nama_brg' => $request->nama_brg,
-            'kategori_barang_id' => $request->kategori_barang,
+            'kategoribarang_id' => $request->kategoribarang,
             'jumlah_brg' => $request->jumlah_brg,
             'tgl_masuk' =>$request->tgl_masuk,
         ]);
@@ -64,7 +64,7 @@ class MasukController extends Controller
         $barangmasuk = barangmasuk::find($id);
         $barangmasuk->update([
             'nama_brg' => $request->nama_brg,
-            'kategori_barang_id' => $request->kategori_barang_id,
+            'kategoribarang_id' => $request->kategoribarang_id,
             'jumlah_brg' => $request->jumlah_brg,
             'tgl_masuk' =>$request->tgl_masuk,
         ]);

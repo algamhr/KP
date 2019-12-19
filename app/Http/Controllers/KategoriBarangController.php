@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\kategory_barang;
+use App\kategoribarang;
 
-class KategoryBarangController extends Controller
+class KategoriBarangController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class KategoryBarangController extends Controller
      */
     public function index()
     {
-        return view('kategorybarang.index')
-        ->with('kategory_barang', kategory_barang::all());
+        return view('kategoribarang.index')
+        ->with('kategoribarang', kategoribarang::all());
 
     }
 
@@ -38,18 +38,18 @@ class KategoryBarangController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'keterangan' => 'required',
+            'keteranganbarang' => 'required',
 
         ]);
 
-        $kategory_barang = kategory_barang::create([
-            'keterangan_barang' => $request->nama_brg,
-            'kategory_barang' => $request->kategori_barang,
-
+        $kategoribarang = kategoribarang::create([
+            'kategoribarang' => $request->kategoribarang,
+            'keteranganbarang' => $request->keteranganbarang,
+            
         ]);
 
         session()->flash('success', 'urusan berhasil di tambahkan');
-         return redirect(route('kategory-barang.index'));
+         return redirect(route('kategoribarang.index'));
     }
 
     /**
@@ -84,22 +84,22 @@ class KategoryBarangController extends Controller
     public function update(Request $request, $id)
     {
           $request->validate([
-            'nama_brg' => 'required',
+            'kategoribarang' => 'required',
         ]);
 
-        $kategory_barang = kategory_barang::find($id);
-        $kategory_barang->update([
-            'keterangan_barang' => $request->nama_brg,
-            'kategory_barang' => $request->kategory_barang,
+        $kategoribarang = kategoribarang::find($id);
+        $kategoribarang->update([
+            'keteranganbarang' => $request->keteranganbarang,
+            'kategoribarang' => $request->kategoribarang,
 
         ]);
 
-        if (!$kategory_barang) {
+        if (!$kategoribarang) {
             session()->flash('success', 'Data gagal diubah');
-            return redirect(route('kategory-barang.index'));
+            return redirect(route('kategoribarang.index'));
         } else {
             session()->flash('success', 'Data berhasil diubah');
-            return redirect(route('kategory-barang.index'));
+            return redirect(route('kategoriibarang.index'));
         }
     }
 
@@ -111,15 +111,15 @@ class KategoryBarangController extends Controller
      */
     public function destroy($id)
     {
-        $kategory_barang = kategory_barang::find($id);
-        $kategory_barang->delete();
+        $kategoribarang = kategoribarang::find($id);
+        $kategoribarang->delete();
 
-        if (!$kategory_barang) {
+        if (!$kategoribarang) {
             session()->flash('success', 'Data gagal dihapus');
-            return redirect(route('kategory-barang.index'));
+            return redirect(route('kategoribarang.index'));
         } else {
             session()->flash('success', 'Data berhasil dihapus');
-            return redirect(route('kategory-barang.index'));
+            return redirect(route('kategoribarang.index'));
         }
     }
 }
