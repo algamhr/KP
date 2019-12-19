@@ -18,7 +18,7 @@
         <hr class="sidebar-divider my-0">
   
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="/home">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
@@ -39,13 +39,13 @@
   
         <!-- Nav Item - Barang Keluar -->
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="charts.html">
             <i class="fas fa-fw fa-folder"></i>
             <span>Barang Keluar</span></a>
         </li>
 
         <!-- Nav Item - Kategori Barang -->
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="/kategoribarang">
             <i class="fas fa-fw fa-wrench"></i>
             <span>Kategori Barang</span>
