@@ -38,11 +38,11 @@
         </li>
 
         <!-- Nav Item - Barang Keluar -->
-        {{-- <li class="nav-item">
+        <li class="nav-item">
           <a class="nav-link" href="charts.html">
             <i class="fas fa-fw fa-folder"></i>
             <span>Barang Keluar</span></a>
-        </li> --}}
+        </li>
 
         <!-- Nav Item - Kategori Barang -->
         <li class="nav-item active">

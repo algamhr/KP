@@ -26,8 +26,9 @@ class MasukController extends Controller
      */
     public function index()
     {
-        $barangmasuk = DB::table('barang')->orderBy('tgl_masuk', 'desc')->get();
-        return view('barangmasuk.index', ['barangmasuk'=>$barangmasuk])
+        
+        return view('barangmasuk.index')
+        ->with('barangmasuk', barangmasuk::all())
         ->with('kategoribarang', kategoribarang::all());
     }
 

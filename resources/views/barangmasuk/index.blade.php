@@ -4,10 +4,10 @@
 
 <!-- Begin Page Content -->
 <div class="container-fluid">
-    {{-- <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                 class="fas fa-download fa-sm text-white-50"></i> Simpan Dokumen</a>
-    </div> --}}
+    </div>
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
@@ -26,7 +26,7 @@
                 <thead>
                   <tr>
                     <th>Nomor</th>
-
+                    <th>Kategori Barang</th>
                     <th>Nama Barang</th>
                     <th>Jumlah</th>
                     <th>Tanggal Masuk</th>
@@ -39,14 +39,13 @@
                 <tbody>
                   <tr>
                     <td class="text-left">{{$no++}}</td>
-
+                    <td class="text-left">{{$barangmasuk->kategoribarang->keteranganbarang}}</td>
                     <td class="text-left">{{$barangmasuk->nama_brg}}</td>
                     <td class="text-left">{{$barangmasuk->jumlah_brg}}</td>
                     <td class="text-left">{{$barangmasuk->tgl_masuk}}</td>
                     <td>
                          @include('barangmasuk.edit')
                          @include('barangmasuk.delete')
-
                     </td>
                   </tr>
                   @endforeach

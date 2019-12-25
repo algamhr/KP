@@ -17,6 +17,6 @@ class barangmasuk extends Model
 
     public function kategoribarang()
     {
-        return $this->belongsTo(kategoribarang::class);
+        return $this->belongsTo('App\kategoribarang');
     }
 }

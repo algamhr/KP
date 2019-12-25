@@ -11,11 +11,10 @@ class kategoribarang extends Model
     protected $fillable =[
         'kategoribarang',
         'keteranganbarang',
-
     ];
 
     public function barangmasuk()
     {
-        return $this->hasMany(barangmasuk::class);
+        return $this->hasMany('App\barangmasuk');
     }
 }
