@@ -11,9 +11,12 @@
 |
 */
 
+use Illuminate\Auth\Access\Response;
+
 Route::get('/', 'HomeController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('barangmasuk', 'MasukController');
 Route::resource('kategoribarang', 'KategoriBarangController');
+Route::resource('divisi', 'DivisiController');

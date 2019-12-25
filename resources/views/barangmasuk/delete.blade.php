@@ -20,9 +20,9 @@
                     <form action="{{ route('barangmasuk.destroy', $barangmasuk->id) }}" method="POST">
                         @method('DELETE')
                         @csrf
-                        <input class="btn btn-danger btn-sm" type="submit" value="delete" />
+                        <input class="btn btn-danger btn-sm" type="submit" value="Delete" />
                     </form>
-                    <button type="button" class="btn btn-secondary btn-icon-split" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
                     {{-- <a href="{{route('user.destroy', $user->id)}}" class="btn btn-danger">Hapus</a> --}}
                 </div>
             </div>
