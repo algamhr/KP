@@ -32,11 +32,10 @@
                     <th>Tanggal Masuk</th>
                     <th>Action</th>
                   </tr>
-
                 </thead>
-                @php $no = 1; @endphp
-                @foreach ($barangmasuk as $barangmasuk)
                 <tbody>
+                    @php $no = 1; @endphp
+                    @foreach ($barangmasuk as $barangmasuk)
                   <tr>
                     <td class="text-left">{{$no++}}</td>
                     <td class="text-left">{{$barangmasuk->kategoribarang->keteranganbarang}}</td>

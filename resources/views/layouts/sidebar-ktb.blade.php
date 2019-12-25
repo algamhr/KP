@@ -39,7 +39,7 @@
 
         <!-- Nav Item - Barang Keluar -->
         <li class="nav-item">
-          <a class="nav-link" href="charts.html">
+          <a class="nav-link" href="#">
             <i class="fas fa-fw fa-folder"></i>
             <span>Barang Keluar</span></a>
         </li>

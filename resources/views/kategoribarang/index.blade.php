@@ -29,9 +29,9 @@
                   </tr>
 
                 </thead>
-                @php $no = 1; @endphp
-                @foreach ($kategoribarang as $kategoribarang)
                 <tbody>
+                    @php $no = 1; @endphp
+                    @foreach ($kategoribarang as $kategoribarang)
                   <tr>
                     <td class="text-left">{{$no++}}</td>
                     <td class="text-left">{{$kategoribarang->kategoribarang}}</td>
