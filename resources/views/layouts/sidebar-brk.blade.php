@@ -30,7 +30,7 @@
             </div>
 
             <!-- Nav Item - Barang Masuk -->
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="/barangmasuk">
                 <i class="fas fa-fw fa-cubes"></i>
                 <span>Barang Masuk</span>
@@ -38,7 +38,7 @@
             </li>
 
             <!-- Nav Item - Barang Keluar -->
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="/barangkeluar">
                 <i class="fas fa-fw fa-cube"></i>
                 <span>Barang Keluar</span></a>
