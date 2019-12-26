@@ -18,5 +18,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('barangmasuk', 'MasukController');
+Route::resource('barangkeluar', 'KeluarController');
 Route::resource('kategoribarang', 'KategoriBarangController');
 Route::resource('divisi', 'DivisiController');

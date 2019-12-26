@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\barangmasuk;
+use App\barangkeluar;
 use App\kategoribarang;
 
 class MasukController extends Controller
@@ -25,8 +26,7 @@ class MasukController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    {
-        
+    {        
         return view('barangmasuk.index')
         ->with('barangmasuk', barangmasuk::all())
         ->with('kategoribarang', kategoribarang::all());
@@ -44,7 +44,6 @@ class MasukController extends Controller
     {
         $request->validate([
             'nama_brg' => 'required',
-
         ]);
 
         $barangmasuk = barangmasuk::create([
@@ -55,7 +54,7 @@ class MasukController extends Controller
         ]);
 
         session()->flash('success', 'urusan berhasil di tambahkan');
-         return redirect(route('barangmasuk.index'));
+        return redirect(route('barangmasuk.index'));
     }
 
     public function update(Request $request, $id)
@@ -74,7 +73,7 @@ class MasukController extends Controller
 
         if (!$barangmasuk) {
             session()->flash('success', 'Data gagal diubah');
-            return redirect(route('unibarangmasukt.index'));
+            return redirect(route('barangmasuk.index'));
         } else {
             session()->flash('success', 'Data berhasil diubah');
             return redirect(route('barangmasuk.index'));

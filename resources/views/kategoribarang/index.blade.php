@@ -12,7 +12,7 @@
                 @include('kategoribarang.add')
             </div>
 
-            <h6 class="m-0 font-weight-bold text-primary">Tabel Kategori Barang</h6>
+            <h6 class="m-0 font-weight-bold text-primary mt-2">Tabel Kategori Barang</h6>
 
 
           </div>

@@ -17,7 +17,7 @@ class CreateBarangkeluarTable extends Migration
             $table->bigIncrements('id');
             $table->string('nama_brg');
             $table->integer('jumlah_brg_keluar');
-            $table->date('tgl_masuk');
+            $table->date('tgl_keluar');
             $table->string('divisi_id');
             $table->timestamps();
         });

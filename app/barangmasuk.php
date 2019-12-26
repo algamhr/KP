@@ -19,4 +19,8 @@ class barangmasuk extends Model
     {
         return $this->belongsTo('App\kategoribarang');
     }
+    public function barangkeluar()
+    {
+        return $this->hasMany('App\barangkeluar');
+    }
 }

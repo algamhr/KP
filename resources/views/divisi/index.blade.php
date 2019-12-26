@@ -12,7 +12,7 @@
                 @include('divisi.add')
             </div>
 
-            <h6 class="m-0 font-weight-bold text-primary">Tabel Divisi</h6>
+            <h6 class="m-0 font-weight-bold text-primary mt-2">Tabel Divisi</h6>
 
 
           </div>
