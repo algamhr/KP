@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2019 at 12:03 PM
+-- Generation Time: Dec 26, 2019 at 04:02 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.1.27
 
@@ -43,7 +43,7 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`id`, `kategoribarang_id`, `nama_brg`, `jumlah_brg`, `tgl_masuk`, `created_at`, `updated_at`) VALUES
-(1, '1', 'Kertas A4 SIDU', 80, '2019-11-09', '2019-12-19 03:48:58', '2019-12-19 03:48:58'),
+(1, '1', 'Kertas A4 SIDU', 80, '2019-11-09', '2019-12-19 03:48:58', '2019-12-25 02:59:24'),
 (2, '1', 'Kertas F4 SIDU', 20, '2019-11-09', '2019-12-19 03:49:20', '2019-12-19 03:49:20'),
 (3, '1', 'Kertas F5 SIDU', 20, '2019-11-09', '2019-12-19 03:49:38', '2019-12-19 03:49:38'),
 (4, '1', 'Kertas A3 SIDU', 10, '2019-11-09', '2019-12-19 03:50:04', '2019-12-19 03:50:04'),
@@ -73,6 +73,29 @@ INSERT INTO `barang` (`id`, `kategoribarang_id`, `nama_brg`, `jumlah_brg`, `tgl_
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `barangkeluar`
+--
+
+CREATE TABLE `barangkeluar` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `nama_brg` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `jumlah_brg_keluar` int(11) NOT NULL,
+  `tgl_keluar` date NOT NULL,
+  `divisi_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `barangkeluar`
+--
+
+INSERT INTO `barangkeluar` (`id`, `nama_brg`, `jumlah_brg_keluar`, `tgl_keluar`, `divisi_id`, `created_at`, `updated_at`) VALUES
+(1, '9', 1, '2019-12-29', '3', '2019-12-25 19:18:53', '2019-12-25 19:18:53');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `divisi`
 --
 
@@ -83,6 +106,16 @@ CREATE TABLE `divisi` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `divisi`
+--
+
+INSERT INTO `divisi` (`id`, `nama_divisi`, `ket_divisi`, `created_at`, `updated_at`) VALUES
+(1, 'Umum', 'Tata Usaha dan Sekretariatan', '2019-12-25 03:11:01', '2019-12-25 03:11:24'),
+(2, 'Teknik', 'Operasional Lapangan dan Fasilitas', '2019-12-25 03:11:46', '2019-12-25 03:11:46'),
+(3, 'Bisnis', 'Mengelola Bisnis dan Manajemen Perusahaan', '2019-12-25 03:12:10', '2019-12-25 03:12:10'),
+(4, 'Keuangan', 'Mengatur dan Mengelola Keuangan', '2019-12-25 03:12:27', '2019-12-25 03:12:27');
 
 -- --------------------------------------------------------
 
@@ -143,7 +176,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (46, '2019_12_13_074519_create_barang_table', 1),
 (48, '2019_12_13_074602_create_divisi_table', 1),
 (49, '2019_12_13_074613_create_gudang_table', 1),
-(50, '2019_12_19_093006_create_kategoribarang_table', 2);
+(50, '2019_12_19_093006_create_kategoribarang_table', 2),
+(51, '2019_12_13_074550_create_kategori_barang_table', 3),
+(52, '2019_12_25_093008_create_barangkeluar_table', 3);
 
 -- --------------------------------------------------------
 
@@ -195,6 +230,12 @@ ALTER TABLE `barang`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `barangkeluar`
+--
+ALTER TABLE `barangkeluar`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `divisi`
 --
 ALTER TABLE `divisi`
@@ -242,10 +283,16 @@ ALTER TABLE `barang`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
+-- AUTO_INCREMENT for table `barangkeluar`
+--
+ALTER TABLE `barangkeluar`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `divisi`
 --
 ALTER TABLE `divisi`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `gudang`
@@ -263,7 +310,7 @@ ALTER TABLE `kategoribarang`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
 -- AUTO_INCREMENT for table `users`
