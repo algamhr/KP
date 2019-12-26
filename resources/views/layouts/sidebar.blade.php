@@ -24,6 +24,9 @@
             <span>Dashboard</span></a>
         </li>
 
+        <!-- Divider -->
+        <hr class="sidebar-divider my-2">
+
         <!-- Heading -->
         <div class="sidebar-heading">
           Barang
@@ -51,6 +54,14 @@
             <span>Kategori Barang</span>
           </a>
         </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-2">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+          Pegawai
+        </div>
 
         <li class="nav-item">
             <a class="nav-link" href="/divisi">
