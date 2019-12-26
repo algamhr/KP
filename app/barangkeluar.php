@@ -9,7 +9,7 @@ class barangkeluar extends Model
     protected $table = 'barangkeluar';
     protected $fillable =[
         'id',
-        'nama_brg',
+        'barang_id',
         'jumlah_brg_keluar',
         'tgl_keluar',
         'divisi_id',

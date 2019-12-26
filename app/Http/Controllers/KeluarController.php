@@ -52,11 +52,11 @@ class KeluarController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama_brg' => 'required',
+            'barang_id' => 'required',
         ]);
 
         $barangkeluar = barangkeluar::create([
-            'nama_brg' => $request->nama_brg,
+            'barang_id' => $request->barangmasuk,
             'jumlah_brg_keluar' => $request->jumlah_brg_keluar,
             'tgl_keluar' =>$request->tgl_keluar,
             'divisi_id' =>$request->divisi,
@@ -98,12 +98,12 @@ class KeluarController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'nama_brg' => 'required',
+            'barang_id' => 'required',
         ]);
 
         $barangkeluar = barangkeluar::find($id);
         $barangkeluar->update([
-            'nama_brg' => $request->nama_brg,
+            'barang_id' => $request->barang_id,
             'jumlah_brg_keluar' => $request->jumlah_brg_keluar,
             'tgl_keluar' =>$request->tgl_keluar,
             'divisi_id' =>$request->divisi_id,

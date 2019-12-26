@@ -36,7 +36,7 @@
                         @foreach ($barangkeluar as $barangkeluar)
                         <tr>
                             <td class="text-left">{{$no++}}</td>
-                            <td class="text-left">{{$barangkeluar->nama_brg}}</td>  
+                            <td class="text-left">{{$barangkeluar->barangmasuk->nama_brg}}</td>  
                             <td class="text-left">{{$barangkeluar->jumlah_brg_keluar}}</td>
                             <td class="text-left">{{$barangkeluar->tgl_keluar}}</td>
                             <td class="text-left">{{$barangkeluar->divisi->nama_divisi}}</td>
