@@ -18,6 +18,7 @@ class KeluarController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        // git request-pull [-p] <start> <url> [<end>]
     }
 
     /**
@@ -51,7 +52,7 @@ class KeluarController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         $barangkeluar = barangkeluar::create([
             'barangmasuk_id' => $request->barangmasuk,
             'jumlah_brg_keluar' => $request->jumlah_brg_keluar,
