@@ -20,7 +20,7 @@
                     <div class="form-group">
                         <label for="nama_brg">Nama Barang</label>
                         <input type="text" class="form-control" name="nama_brg" id="nama_brg" placeholder="Nama Barang"
-                            value="{{$barangkeluar->nama_brg}}">
+                            value="{{$barangkeluar->barangmasuk->nama_brg}}" readonly>
                     </div>
                     <div class="form-group">
                         <label for="jumlah_brg_keluar">Jumlah Barang Keluar</label>
