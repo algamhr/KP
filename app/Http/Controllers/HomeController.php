@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\barangmasuk;
+use App\barangkeluar;
 class HomeController extends Controller
 {
     /**
@@ -23,11 +24,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('home')
+        ->with('total_masuk', barangmasuk::all()->sum('jumlah_brg'))
+        ->with('total_keluar', barangkeluar::all()->sum('jumlah_brg_keluar'));
     }
 
     public function barangmasuk()
     {
         return view('barangmasuk');
+
     }
 }
