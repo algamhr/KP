@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 26, 2019 at 04:02 AM
+-- Generation Time: Jan 01, 2020 at 07:35 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.1.27
 
@@ -25,10 +25,34 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `barang`
+-- Table structure for table `barangkeluar`
 --
 
-CREATE TABLE `barang` (
+CREATE TABLE `barangkeluar` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `barangmasuk_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `jumlah_brg_keluar` int(11) NOT NULL,
+  `tgl_keluar` date NOT NULL,
+  `divisi_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `barangkeluar`
+--
+
+INSERT INTO `barangkeluar` (`id`, `barangmasuk_id`, `jumlah_brg_keluar`, `tgl_keluar`, `divisi_id`, `created_at`, `updated_at`) VALUES
+(2, '5', 1, '2019-12-29', '4', '2019-12-31 23:11:33', '2019-12-31 23:11:33'),
+(3, '9', 5, '2019-12-29', '1', '2019-12-31 23:11:56', '2019-12-31 23:11:56');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `barangmasuk`
+--
+
+CREATE TABLE `barangmasuk` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `kategoribarang_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `nama_brg` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -39,10 +63,10 @@ CREATE TABLE `barang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `barang`
+-- Dumping data for table `barangmasuk`
 --
 
-INSERT INTO `barang` (`id`, `kategoribarang_id`, `nama_brg`, `jumlah_brg`, `tgl_masuk`, `created_at`, `updated_at`) VALUES
+INSERT INTO `barangmasuk` (`id`, `kategoribarang_id`, `nama_brg`, `jumlah_brg`, `tgl_masuk`, `created_at`, `updated_at`) VALUES
 (1, '1', 'Kertas A4 SIDU', 80, '2019-11-09', '2019-12-19 03:48:58', '2019-12-25 02:59:24'),
 (2, '1', 'Kertas F4 SIDU', 20, '2019-11-09', '2019-12-19 03:49:20', '2019-12-19 03:49:20'),
 (3, '1', 'Kertas F5 SIDU', 20, '2019-11-09', '2019-12-19 03:49:38', '2019-12-19 03:49:38'),
@@ -69,29 +93,6 @@ INSERT INTO `barang` (`id`, `kategoribarang_id`, `nama_brg`, `jumlah_brg`, `tgl_
 (24, '1', 'Pulpen Pilot Hijau', 5, '2019-11-09', '2019-12-19 03:59:16', '2019-12-19 03:59:16'),
 (25, '1', 'Tipe x Cair botol', 4, '2019-11-09', '2019-12-19 03:59:26', '2019-12-19 03:59:26'),
 (26, '1', 'Spidol Permanent hitam', 5, '2019-11-09', '2019-12-19 03:59:34', '2019-12-19 03:59:34');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `barangkeluar`
---
-
-CREATE TABLE `barangkeluar` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `nama_brg` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `jumlah_brg_keluar` int(11) NOT NULL,
-  `tgl_keluar` date NOT NULL,
-  `divisi_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `barangkeluar`
---
-
-INSERT INTO `barangkeluar` (`id`, `nama_brg`, `jumlah_brg_keluar`, `tgl_keluar`, `divisi_id`, `created_at`, `updated_at`) VALUES
-(1, '9', 1, '2019-12-29', '3', '2019-12-25 19:18:53', '2019-12-25 19:18:53');
 
 -- --------------------------------------------------------
 
@@ -224,15 +225,15 @@ INSERT INTO `users` (`id`, `name`, `username`, `email`, `email_verified_at`, `pa
 --
 
 --
--- Indexes for table `barang`
---
-ALTER TABLE `barang`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `barangkeluar`
 --
 ALTER TABLE `barangkeluar`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `barangmasuk`
+--
+ALTER TABLE `barangmasuk`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -277,16 +278,16 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `barang`
---
-ALTER TABLE `barang`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
-
---
 -- AUTO_INCREMENT for table `barangkeluar`
 --
 ALTER TABLE `barangkeluar`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `barangmasuk`
+--
+ALTER TABLE `barangmasuk`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `divisi`
