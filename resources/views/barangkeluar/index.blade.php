@@ -13,14 +13,11 @@
             <div class="float-right">
                 @include('barangkeluar.add')
             </div>
-
             <h6 class="m-0 font-weight-bold text-primary mt-2">Tabel Data Barang Keluar</h6>
-
         </div>
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-
                     <thead>
                         <tr>
                             <th>Nomor</th>

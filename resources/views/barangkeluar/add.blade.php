@@ -16,8 +16,8 @@
             {{ csrf_field() }}
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="nama_brg">Divisi</label>
-                    <select name="nama_brg" id="nama_brg" class="form-control">
+                    <label for="barangmasuk">Nama Barang</label>
+                    <select name="barangmasuk" id="barangmasuk" class="form-control">
                         @foreach($barangmasuk as $barangmasuk)
                         <option value=" {{ $barangmasuk->id }}">
                         {{ $barangmasuk->nama_brg }}

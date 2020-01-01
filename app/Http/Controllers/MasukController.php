@@ -35,7 +35,7 @@ class MasukController extends Controller
     public function destroy($id)
     {
         //
-        $barangmasuk = DB::table('barang')->where('id', $id)->delete();
+        $barangmasuk = DB::table('barangmasuk')->where('id', $id)->delete();
         session()->flash('success', 'data barang berhasil di hapus');
         return redirect(route('barangmasuk.index'));
     }
