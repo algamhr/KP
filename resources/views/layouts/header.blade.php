@@ -24,4 +24,8 @@
   <link href="{{asset('assets/backend/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
   <script src="{{asset('assets/backend/js/core/jquery.3.2.1.min.js')}}"></script>
 
+  <link href="{{ asset('css/flatpicker.css') }}" rel="stylesheet">
+  <link  href="{{ asset('assets/admin/message/toastr.min.css') }}" rel="stylesheet">
+<script src="{{ asset('assets/admin/message/toastr.min.js') }}"></script>
+
 </head>

@@ -37,11 +37,15 @@
                         <input type="text" class="form-control" name="jumlah_brg" id="nama_brg"
                             placeholder="Jumlah Barang" value="{{$barangmasuk->jumlah_brg}}">
                     </div>
+
+
                     <div class="form-group">
-                        <label for="jumlah_brg">Tanggal Masuk</label>
-                        <input type="text" class="form-control" name="tgl_masuk" id="tgl_masuk" placeholder="yyyy/mm/dd"
-                            value="{{$barangmasuk->tgl_masuk}}">
+                        <label for="masuk">Tanggal Masuk </label>
+                         <input class="form-control" type="text" name="tgl_masuk" id="published_at" value="{{$barangmasuk->tgl_masuk}}">
+                        <div class="mdc-line-ripple"></div>
                     </div>
+
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

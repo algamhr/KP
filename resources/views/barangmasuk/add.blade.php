@@ -35,10 +35,15 @@
                     <label for="jumlah_brg">Jumlah Barang</label>
                     <input type="text" class="form-control"  name="jumlah_brg" id="jumlah barang" placeholder="Jumlah Barang">
                 </div>
+
+
                 <div class="form-group">
-                    <label for="tgl_masuk">Tanggal Masuk</label>
-                    <input type="text" class="form-control" name="tgl_masuk" id="tgl_masuk" placeholder="yyyy-mm-dd">
+                    <label for="masuk">Tanggal Masuk </label>
+                     <input class="form-control" type="text"  name="tgl_masuk" id="published_at" value="{{ old('tg;') }}" placeholder="Tanggal">
+                    <div class="mdc-line-ripple"></div>
                 </div>
+
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

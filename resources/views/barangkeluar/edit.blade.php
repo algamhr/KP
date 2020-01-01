@@ -27,11 +27,15 @@
                         <input type="text" class="form-control" name="jumlah_brg_keluar" id="jumlah_brg_keluar"
                             placeholder="Jumlah Barang Keluar" value="{{$barangkeluar->jumlah_brg_keluar}}">
                     </div>
+
+
                     <div class="form-group">
-                        <label for="jumlah_brg">Tanggal Keluar</label>
-                        <input type="text" class="form-control" name="tgl_keluar" id="tgl_keluar"
-                            placeholder="yyyy-mm-dd" value="{{$barangkeluar->tgl_keluar}}">
+                        <label for="masuk">Tanggal Masuk </label>
+                         <input class="form-control" type="text" name="tgl_keluar" id="published_at" value="{{$barangkeluar->tgl_keluar}}">
+                        <div class="mdc-line-ripple"></div>
                     </div>
+
+
                     <div class="form-group">
                         <label for="divisi">Divisi</label>
                         <select name="divisi_id" id="divisi" class="form-control">

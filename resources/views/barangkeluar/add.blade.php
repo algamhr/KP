@@ -29,11 +29,16 @@
                     <label for="jumlah_brg_keluar">Jumlah Barang Keluar</label>
                     <input type="text" class="form-control"  name="jumlah_brg_keluar" id="jumlah_brg_keluar" placeholder="Jumlah Barang">
                 </div>
+
+
+
                 <div class="form-group">
-                    <label for="tgl_keluar">Tanggal Keluar</label>
-                    <input type="text" class="form-control" name="tgl_keluar" id="tgl_keluar" placeholder="yyyy-mm-dd">
+                    <label for="masuk">Tanggal Masuk </label>
+                     <input class="form-control" type="text"  name="tgl_keluar" id="published_at"  placeholder="Tanggal">
+                    <div class="mdc-line-ripple"></div>
                 </div>
-            
+
+
                 <div class="form-group">
                     <label for="divisi">Divisi</label>
                     <select name="divisi" id="divisi" class="form-control">
