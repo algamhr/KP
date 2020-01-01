@@ -3,24 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use App\barangkeluar;
-use App\barangmasuk;
-use App\divisi;
+use Illuminate\Support\Facades\Hash;
+use App\User;
 
-class KeluarController extends Controller
+class UserController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware('auth');
-        // git request-pull [-p] <start> <url> [<end>]
     }
-
     /**
      * Display a listing of the resource.
      *
@@ -28,10 +19,9 @@ class KeluarController extends Controller
      */
     public function index()
     {
-        return view('barangkeluar.index')
-        ->with('barangkeluar', barangkeluar::all())
-        ->with('barangmasuk', barangmasuk::all())
-        ->with('divisi', divisi::all());
+        $title = 'Pengelola';
+        $user = User::all();
+        return view('user.index', ['user' => $user, 'title' => $title]);
     }
 
     /**
@@ -52,16 +42,27 @@ class KeluarController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required',
 
-        $barangkeluar = barangkeluar::create([
-            'barangmasuk_id' => $request->barangmasuk,
-            'jumlah_brg_keluar' => $request->jumlah_brg_keluar,
-            'tgl_keluar' =>$request->tgl_keluar,
-            'divisi_id' =>$request->divisi,
         ]);
 
-        session()->flash('success', 'urusan berhasil di tambahkan');
-        return redirect(route('barangkeluar.index'));
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+
+        ]);
+
+        if (!$user) {
+            session()->flash('success', 'Data gagal ditambah');
+            return redirect(route('user.index'));
+        } else {
+            session()->flash('success', 'Data berhasil ditambah');
+            return redirect(route('user.index'));
+        }
     }
 
     /**
@@ -95,24 +96,20 @@ class KeluarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'barangmasuk_id' => 'required',
+        $user = User::find($id);
+        $user->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+
         ]);
 
-        $barangkeluar = barangkeluar::find($id);
-        $barangkeluar->update([
-            'barangmasuk_id' => $request->barang_id,
-            'jumlah_brg_keluar' => $request->jumlah_brg_keluar,
-            'tgl_keluar' =>$request->tgl_keluar,
-            'divisi_id' =>$request->divisi_id,
-        ]);
-
-        if (!$barangkeluar) {
+        if (!$user) {
             session()->flash('success', 'Data gagal diubah');
-            return redirect(route('barangkeluar.index'));
+            return redirect(route('user.index'));
         } else {
             session()->flash('success', 'Data berhasil diubah');
-            return redirect(route('barangkeluar.index'));
+            return redirect(route('user.index'));
         }
     }
 
@@ -124,8 +121,14 @@ class KeluarController extends Controller
      */
     public function destroy($id)
     {
-        $barangkeluar = DB::table('barangkeluar')->where('id', $id)->delete();
-        session()->flash('success', 'data barang berhasil di hapus');
-        return redirect(route('barangkeluar.index'));
+        $user = User::find($id);
+        $user->delete();
+        if (!$user) {
+            session()->flash('success', 'Data gagal dihapus');
+            return redirect(route('user.index'));
+        } else {
+            session()->flash('success', 'Data berhasil dihapus');
+            return redirect(route('user.index'));
+        }
     }
 }
