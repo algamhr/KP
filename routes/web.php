@@ -21,3 +21,4 @@ Route::resource('barangmasuk', 'MasukController');
 Route::resource('barangkeluar', 'KeluarController');
 Route::resource('kategoribarang', 'KategoriBarangController');
 Route::resource('divisi', 'DivisiController');
+Route::resource('user', 'UserController');
