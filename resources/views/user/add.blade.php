@@ -20,6 +20,10 @@
                     <input type="text" class="form-control form-control-sm" name="name" id="name" placeholder="Nama Lengkap" value="{{old('name')}}">
                 </div>
                 <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control form-control-sm" name="username" id="username" placeholder="Username" value="{{old('username')}}">
+                    </div>
+                <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" class="form-control form-control-sm" name="email" id="email" placeholder="Email" value="{{old('email')}}">
                 </div>

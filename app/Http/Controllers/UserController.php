@@ -44,6 +44,7 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => 'required',
+            'username' => 'required',
             'email' => 'required',
             'password' => 'required',
 
@@ -51,6 +52,7 @@ class UserController extends Controller
 
         $user = User::create([
             'name' => $request->name,
+            'username' => $request->username,
             'email' => $request->email,
             'password' => Hash::make($request->password),
 
@@ -99,6 +101,7 @@ class UserController extends Controller
         $user = User::find($id);
         $user->update([
             'name' => $request->name,
+            'username' => $request->username,
             'email' => $request->email,
             'password' => Hash::make($request->password),
 

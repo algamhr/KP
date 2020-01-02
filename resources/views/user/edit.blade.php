@@ -21,6 +21,10 @@
                         <input type="text" class="form-control form-control-sm" name="name" id="name" placeholder="Nama Lengkap" value="{{$user->name}}">
                     </div>
                     <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control form-control-sm" name="username" id="name" placeholder="Username" value="{{$user->username}}" readonly>
+                        </div>
+                    <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" class="form-control form-control-sm" name="email" id="email" placeholder="Email" value="{{$user->email}}">
                     </div>

@@ -19,7 +19,7 @@
                 <form action="{{ route('user.destroy', $user->id) }}" method="POST">
                     @method('DELETE')
                     @csrf
-                    <input class="btn btn-danger btn-sm" type="submit" value="delete" />
+                    <input class="btn btn-danger btn-sm" type="submit" value="Delete" />
                 </form> 
                     
                 <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
