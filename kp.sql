@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 01, 2020 at 07:35 AM
+-- Generation Time: Jan 02, 2020 at 10:35 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.1.27
 
@@ -43,8 +43,10 @@ CREATE TABLE `barangkeluar` (
 --
 
 INSERT INTO `barangkeluar` (`id`, `barangmasuk_id`, `jumlah_brg_keluar`, `tgl_keluar`, `divisi_id`, `created_at`, `updated_at`) VALUES
-(2, '5', 1, '2019-12-29', '4', '2019-12-31 23:11:33', '2019-12-31 23:11:33'),
-(3, '9', 5, '2019-12-29', '1', '2019-12-31 23:11:56', '2019-12-31 23:11:56');
+(4, '1', 4, '2019-12-18', '2', '2020-01-01 00:18:20', '2020-01-01 00:18:20'),
+(5, '1', 2, '2019-11-21', '4', '2020-01-01 00:18:50', '2020-01-01 00:18:50'),
+(6, '11', 5, '2019-11-11', '2', '2020-01-01 01:13:35', '2020-01-01 01:13:35'),
+(7, '1', 50, '2019-11-20', '1', '2020-01-01 01:13:50', '2020-01-01 01:13:50');
 
 -- --------------------------------------------------------
 
@@ -92,7 +94,46 @@ INSERT INTO `barangmasuk` (`id`, `kategoribarang_id`, `nama_brg`, `jumlah_brg`, 
 (23, '1', 'Pulpen pilot Hitam', 5, '2019-11-09', '2019-12-19 03:59:02', '2019-12-19 03:59:02'),
 (24, '1', 'Pulpen Pilot Hijau', 5, '2019-11-09', '2019-12-19 03:59:16', '2019-12-19 03:59:16'),
 (25, '1', 'Tipe x Cair botol', 4, '2019-11-09', '2019-12-19 03:59:26', '2019-12-19 03:59:26'),
-(26, '1', 'Spidol Permanent hitam', 5, '2019-11-09', '2019-12-19 03:59:34', '2019-12-19 03:59:34');
+(26, '1', 'Spidol Permanent hitam', 5, '2019-11-09', '2019-12-19 03:59:34', '2019-12-19 03:59:34'),
+(27, '1', 'Spidol Permanent Warna (Merah, Biru, dan Hijau)', 5, '2019-11-09', '2019-12-31 23:38:39', '2019-12-31 23:38:39'),
+(28, '1', 'Spidol Non Permanent hitam', 5, '2019-11-09', '2019-12-31 23:39:34', '2019-12-31 23:39:34'),
+(29, '1', 'Spidol Non Permanent Warna (Merah, Biru, dan Hijau)', 5, '2019-11-09', '2019-12-31 23:39:59', '2019-12-31 23:39:59'),
+(30, '1', 'Pulpen Tanda Tangan Cair Hitam', 2, '2019-11-09', '2019-12-31 23:40:50', '2019-12-31 23:40:50'),
+(31, '1', 'Lem Kertas', 24, '2019-11-09', '2019-12-31 23:41:40', '2019-12-31 23:41:40'),
+(32, '1', 'Hecter Besar', 5, '2019-11-09', '2019-12-31 23:42:17', '2019-12-31 23:42:17'),
+(33, '1', 'Hecter Kecil', 5, '2019-11-09', '2019-12-31 23:42:32', '2019-12-31 23:42:32'),
+(34, '1', 'Isi Hecter Besar', 4, '2019-11-09', '2019-12-31 23:43:15', '2019-12-31 23:43:37'),
+(35, '1', 'Isi Hecter Kecil', 4, '2019-11-09', '2019-12-31 23:48:52', '2019-12-31 23:48:52'),
+(36, '1', 'Klip Kertas Besar', 5, '2019-11-09', '2019-12-31 23:49:10', '2019-12-31 23:49:10'),
+(37, '1', 'Klip Kertas Kecil', 5, '2019-11-09', '2019-12-31 23:50:32', '2019-12-31 23:50:32'),
+(38, '1', 'Isi Tinta Stampel Biru', 5, '2019-11-09', '2019-12-31 23:53:13', '2019-12-31 23:53:13'),
+(39, '1', 'Map Biola', 2, '2019-11-09', '2019-12-31 23:53:50', '2019-12-31 23:53:50'),
+(40, '1', 'Map Batik', 2, '2019-11-09', '2019-12-31 23:57:29', '2019-12-31 23:57:29'),
+(41, '1', 'Buku Kwitansi', 1, '2019-11-09', '2019-12-31 23:57:50', '2019-12-31 23:57:50'),
+(42, '1', 'Stabilo Warna', 2, '2019-11-09', '2019-12-31 23:58:15', '2019-12-31 23:58:15'),
+(43, '1', 'Cutter', 4, '2019-11-09', '2019-12-31 23:58:35', '2019-12-31 23:58:35'),
+(44, '1', 'Isi Cutter', 10, '2019-11-09', '2019-12-31 23:58:54', '2019-12-31 23:58:54'),
+(45, '2', 'Baterai ABC A4', 10, '2019-11-01', '2019-12-31 23:59:24', '2019-12-31 23:59:24'),
+(46, '2', 'Baterai ABC A3', 10, '2019-11-01', '2019-12-31 23:59:41', '2019-12-31 23:59:41'),
+(47, '2', 'Baterai ABC A2', 10, '2019-11-01', '2020-01-01 00:00:08', '2020-01-01 00:01:09'),
+(48, '1', 'Sampul Padi', 5, '2019-11-04', '2020-01-01 00:01:35', '2020-01-01 00:01:35'),
+(49, '1', 'Gunting', 10, '2019-11-04', '2020-01-01 00:02:05', '2020-01-01 00:02:05'),
+(50, '1', 'Lem Double Tip', 12, '2019-11-04', '2020-01-01 00:02:38', '2020-01-01 00:02:38'),
+(51, '1', 'Lakban Hitam', 10, '2019-11-04', '2020-01-01 00:02:51', '2020-01-01 00:02:51'),
+(52, '1', 'Isolasi Bening', 10, '2019-11-04', '2020-01-01 00:03:15', '2020-01-01 00:03:15'),
+(53, '3', 'Sapu Ijuk', 3, '2019-11-11', '2020-01-01 00:03:35', '2020-01-01 00:03:35'),
+(54, '3', 'Sapu Lidi', 5, '2019-11-11', '2020-01-01 00:03:59', '2020-01-01 00:04:59'),
+(55, '3', 'Serok Sampah', 5, '2019-11-11', '2020-01-01 00:04:51', '2020-01-01 00:04:51'),
+(56, '3', 'Kantong Sampah', 2, '2019-11-11', '2020-01-01 00:05:39', '2020-01-01 00:05:39'),
+(57, '3', 'Pel Lantai', 2, '2019-11-11', '2020-01-01 00:06:22', '2020-01-01 00:06:22'),
+(58, '3', 'Tempat Pel Lantai', 2, '2019-11-11', '2020-01-01 00:06:50', '2020-01-01 00:07:01'),
+(59, '3', 'Pewangi Ruangan', 3, '2019-11-11', '2020-01-01 00:08:43', '2020-01-01 00:09:12'),
+(60, '3', 'Sabun Cuci Tangan', 4, '2019-11-11', '2020-01-01 00:09:04', '2020-01-01 00:09:19'),
+(61, '3', 'Super Pel', 5, '2019-11-11', '2020-01-01 00:09:49', '2020-01-01 00:09:49'),
+(62, '3', 'Sabun Jendela', 45, '2019-11-11', '2020-01-01 00:10:03', '2020-01-01 00:10:03'),
+(63, '4', 'Teh Bubuk', 3, '2019-11-11', '2020-01-01 00:10:30', '2020-01-01 00:10:30'),
+(64, '4', 'Kopi', 5, '2019-11-11', '2020-01-01 00:10:45', '2020-01-01 00:10:45'),
+(65, '4', 'Gula', 5, '2019-11-11', '2020-01-01 00:11:02', '2020-01-01 00:11:02');
 
 -- --------------------------------------------------------
 
@@ -117,19 +158,6 @@ INSERT INTO `divisi` (`id`, `nama_divisi`, `ket_divisi`, `created_at`, `updated_
 (2, 'Teknik', 'Operasional Lapangan dan Fasilitas', '2019-12-25 03:11:46', '2019-12-25 03:11:46'),
 (3, 'Bisnis', 'Mengelola Bisnis dan Manajemen Perusahaan', '2019-12-25 03:12:10', '2019-12-25 03:12:10'),
 (4, 'Keuangan', 'Mengatur dan Mengelola Keuangan', '2019-12-25 03:12:27', '2019-12-25 03:12:27');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `gudang`
---
-
-CREATE TABLE `gudang` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `nama_gudang` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -217,7 +245,6 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `username`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'Alga Mahargarika', 'algamhr', 'algamahargarika9@gmail.com', NULL, '$2y$10$LDcNsgcaX.cFzPFR8jdPXec/YRqbjaeQBtqxg8a4TQAmslg78iM16', NULL, '2019-12-19 01:15:38', '2019-12-19 01:15:38'),
-(2, 'Taufik Ramadhan', 'taufik', 'ramadhantaufik1998@gmail.com', NULL, '$2y$10$8UyhY5ND2uje4gOH2LLBMuoAImDGqcZRunGOUbTlbQfS.8OTLuILm', NULL, '2019-12-19 01:16:15', '2019-12-19 01:16:15'),
 (3, 'RR Kiswanti', 'rrkiswanti', 'kiswanti@pelindo1.co.id', NULL, '$2y$10$qBoC5GGYJPfeuwwSVsQwQeqCW20hpKnlx5mjmocFzaqViZFmXQ74G', NULL, '2019-12-19 01:16:52', '2019-12-19 01:16:52');
 
 --
@@ -240,12 +267,6 @@ ALTER TABLE `barangmasuk`
 -- Indexes for table `divisi`
 --
 ALTER TABLE `divisi`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `gudang`
---
-ALTER TABLE `gudang`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -281,25 +302,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `barangkeluar`
 --
 ALTER TABLE `barangkeluar`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `barangmasuk`
 --
 ALTER TABLE `barangmasuk`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- AUTO_INCREMENT for table `divisi`
 --
 ALTER TABLE `divisi`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `gudang`
---
-ALTER TABLE `gudang`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `kategoribarang`
@@ -317,7 +332,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
